@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <!--对应类中的属性必须有set方法
+    使用的是无参构造方法
+    <constructor-arg name="" value=""/> 有参构造函数
+    一个通过set去设置 一个直接在构造函数中设置
+    <alias> 为已经配置的bean取别名
+    scope="singleton" 默认
+    scope="prototype" 每次创建一个新的
+     -->
+    <bean id="address" class="com.ga.entity.Address" >
+        <property name="address" value="address"/>
+    </bean>
+    <bean id="user" class="com.ga.entity.User">
+        <property name="name" value="aa"/>
+        <property name="age" value="20"/>
+        <property name="address" ref="address"/>
+        <property name="card">
+            <map>
+                <entry key="1" value="1"/>
+                <entry key="2" value="2"/>
+                <entry key="3" value="3"/>
+            </map>
+        </property>
+        <property name="hobbies">
+            <list>
+                <value>a</value>
+                <value>a</value>
+                <value>a</value>
+            </list>
+        </property>
+
+    </bean>
+
+
+</beans>

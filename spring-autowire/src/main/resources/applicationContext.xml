@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+<!--   <bean id="cat" class="com.ga.entity.Cat"/>-->
+<!--   <bean id="dog" class="com.ga.entity.Dog"/>-->
+<!--使用自动注入的方式
+ 对象的属性和注册的id必须一致
+ autowire="byName" id唯一
+ autowire="byType" 注册的bean只能有一个
+ -->
+<!--    <bean id="people" class="com.ga.entity.People" autowire="byName">-->
+<!--        <property name="name" value="name"/>-->
+<!--    </bean>-->
+    <bean id="cat" class="com.ga.entity.Cat"/>
+    <bean id="dog" class="com.ga.entity.Dog"/>
+    <bean id="people" class="com.ga.entity.People"/>
+    <context:annotation-config/>
+
+</beans>
